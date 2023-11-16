@@ -1,0 +1,28 @@
+{
+  "posts" : [
+    {
+      "id": 1,
+      "title": "Première publication",
+      "datetime": "2023-10-31T08:00:00Z",
+      "body": "Ceci est le contenu de la première publication."
+    },
+    {
+      "id": 2,
+      "title": "Deuxième publication",
+      "datetime": "2023-10-31T09:30:00Z",
+      "body": "Ceci est le contenu de la deuxième publication."
+    },
+    {
+      "id": 3,
+      "title": "Troisième publication",
+      "datetime": "2023-10-31T11:15:00Z",
+      "body": "Ceci est le contenu de la troisième publication."
+    },
+    {
+      "id": 4,
+      "title": "4e publication",
+      "datetime": "2023-10-31T13:45:00Z",
+      "body": "Ceci est le contenu de la quatrième publication."
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+- [ ] EditPost : formulaire du post, permet d'éditer/modifier le contenu du post existant;
+- [ ] NewPost : formulaire du post, permet d'écrire le contenu d'un nouveau post;
+- [ ] Post : ce n'est pas un formulaire mais plutôt un article individuel sur la page principale des posts: titre, date de publication, extrait de contenu, etc.
+- [ ] PostPage : ce n'est pas un formulaire non plus mais un article de blog spécifique accessible à partir de l'URL, et qui affiche les détails de son contenu: titre, date de publication, etc.
