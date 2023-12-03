@@ -14,13 +14,15 @@ import { useState, useEffect } from "react";
 import { format } from "date-fns";
 import axios from "./api/axios";
 import EditPost from "./components/EditPost";
+import Login from "./components/Register";
+import RequireAuth from "./components/RequireAuth";
 //import { useHistory } from "react-router-dom";
 
-/*const ROLES = {
-  "User": 2023,
-  "Editor": 2022,
-  "Admin" : 2021
-}*/
+const ROLES = {
+  Admin: 5150,
+  Editor: 1984,
+  User: 2001,
+};
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -30,6 +32,8 @@ function App() {
   const [postBody, setPostBody] = useState([]);
   const [editTitle, setEditTitle] = useState("");
   const [editBody, setEditBody] = useState("");
+  const [users, setUsers] = useState("");
+  const [pwd, setPwd] = useState("");
   //const navigate = useNavigate();
   //const history = useHistory();
 
@@ -115,7 +119,12 @@ function App() {
             element={<Layout search={search} setSearch={setSearch} />}
           >
             <Route index element={<Home posts={searchResults} />} />
-            <Route path="post">
+            <Route
+              path="post"
+              element={
+                <RequireAuth allowedRoles={[ROLES.Editor, ROLES.Admin]} />
+              }
+            >
               <Route
                 index
                 element={
@@ -146,6 +155,18 @@ function App() {
                       setEditBody={setEditBody}
                     />
                   }
+                />
+              }
+            />
+            <Route
+              path="login"
+              element={
+                <Login
+                  handleSubmit={handleSubmit}
+                  users={users}
+                  setUsers={setUsers}
+                  pwd={pwd}
+                  setPwd={setPwd}
                 />
               }
             />
